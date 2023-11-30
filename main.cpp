@@ -45,20 +45,23 @@ void InvTriABubble()
 int main()
 {
     char c;
-    std::cout << "Choisir entre ordre Croissant ou Décroissant : c/d" << std::endl;
-    std::cin >> c;
-    if( c == 'c')
+    do
     {
-        TriABubble();
+        std::cout << "Choisir entre ordre Croissant ou Décroissant : c/d" << std::endl;
+        std::cin >> c;
     }
-    else if(c == 'd')
-    {
-        InvTriABubble();
-    }
-    else
-    {
-        std::cout << "Pas capable d'écrire les 2 seules lettres proposé" << std::endl;
-        main();
-    }
+    while( c != 'c' || c != 'd');
+        if( c == 'c')
+        {
+            TriABubble();
+        }
+        else if(c == 'd')
+        {
+            InvTriABubble();
+        }
+        else
+        {
+            std::cout << "Pas capable d'écrire les 2 seules lettres proposé" << std::endl;
+        }
     return 0;
 }
