@@ -1,67 +1,18 @@
 #include <iostream>
 
-int tab[] = {5,2,7,4,9};
-
-void TriABubble()
+void MinIndexInTab(int[] tab, int size, int indexInf,int indexSup)
 {
-    for(int i = std::size(tab) - 1; i > 0; i--)
+    for(int i = 0; i < size)
     {
-        for(int j = 0; j < i-1; j++)
-        {
-            if(tab[j] > tab[j+1])
-            {
-                int aux = tab[j];
-                tab[j] = tab[j+1];
-                tab[j+1] = aux;
-            }
-        }
-    }
-    for(int i = 0; i < std::size(tab); i++)
-    {
-        std::cout << tab[i] << std::endl;
-    }
-}
-
-void InvTriABubble()
-{
-    for(int i = 0; i < std::size(tab) - 1; i++)
-    {
-        for(int j = std::size(tab); j > i; j--)
-        {
-            if(tab[j] > tab[j-1])
-            {
-                int aux = tab[j];
-                tab[j] = tab[j-1];
-                tab[j-1] = aux;
-            }
-        }
-    }
-    for(int i = 0; i < std::size(tab); i++)
-    {
-        std::cout << tab[i] << std::endl;
+        
     }
 }
 
 int main()
 {
-    char c;
-    do
-    {
-        std::cout << "Choisir entre ordre Croissant ou Décroissant : c/d" << std::endl;
-        std::cin >> c;
-    }
-    while( c != 'c' || c != 'd');
-        if( c == 'c')
-        {
-            TriABubble();
-        }
-        else if(c == 'd')
-        {
-            InvTriABubble();
-        }
-        else
-        {
-            std::cout << "Pas capable d'écrire les 2 seules lettres proposé" << std::endl;
-        }
+    int size = 3;
+    int tab[] = {8,9,6}
+    
+
     return 0;
 }
